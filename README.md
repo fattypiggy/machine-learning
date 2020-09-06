@@ -1,2 +1,3 @@
 # machine-learning
- Coursera Machine Learning Assignments
+
+Coursera [Machine Learning](https://www.coursera.org/learn/machine-learning/) Assignments.
