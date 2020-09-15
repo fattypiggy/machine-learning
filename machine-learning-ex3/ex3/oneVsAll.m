@@ -56,12 +56,12 @@ X = [ones(m, 1) X];
 			fmincg(@(t)(lrCostFunction(t , X , (y == c) , lambda)), ...
 					initial_theta , options);
 		all_theta(c,:) = theta';
+	end
 
 
 
 
-
-
+	
 
 
 
