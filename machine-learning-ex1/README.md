@@ -2,45 +2,45 @@
 
 * warmUpExercise.m代码
 
-```octave
-    A = eye(5);
+```MATLAB
+A = eye(5);
 ```
 
 * plotData.m代码
 
-```octave
-    plot(x, y, 'rx', 'MarkerSize', 10);
-    ylabel('Profit in &10,000s');
+```MATLAB
+plot(x, y, 'rx', 'MarkerSize', 10);
+ylabel('Profit in &10,000s');
 xlabel('Population of City in 10,000s');
 ```
 
 * gradientDescent.m代码(multi版相同)
 
-```octave
-    error = (X * theta) - y;
-    theta = theta - ((alpha/m) * X'*error);
+```MATLAB
+error = (X * theta) - y;
+theta = theta - ((alpha/m) * X'*error);
 ```
 
 * computeCost.m代码(multi版相同)
 
-```octave
-    J = 1 / (2 * m) *sum((X*theta - y) .^ 2);
+```MATLAB
+J = 1 / (2 * m) *sum((X*theta - y) .^ 2);
 ```
 
 ## Optional Assignments
 
 featureNormalize.m代码
 
-```octave
-    mu = mean(X);
-    sigma = std(X);
-    X_norm = (X - mu) ./ sigma;
+```MATLAB
+mu = mean(X);
+sigma = std(X);
+X_norm = (X - mu) ./ sigma;
 ```
 
 * normalEqn.m代码
 
-```octave
-    theta = inv(X' * X) * X' * y;
+```MATLAB
+theta = inv(X' * X) * X' * y;
 ```
 
 ## Summary

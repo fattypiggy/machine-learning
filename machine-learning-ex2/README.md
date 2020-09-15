@@ -4,46 +4,46 @@
 
 * plotData.m代码
 
-```octave
-    pos = find(y==1); neg = find(y == 0);
-    % Plot Examples
-    plot(X(pos, 1), X(pos, 2), 'k+','LineWidth', 2, ...
+```MATLAB
+pos = find(y==1); neg = find(y == 0);
+% Plot Examples
+plot(X(pos, 1), X(pos, 2), 'k+','LineWidth', 2, ...
+'MarkerSize', 7);
+plot(X(neg, 1), X(neg, 2), 'ko', 'MarkerFaceColor', 'y', ...
     'MarkerSize', 7);
-    plot(X(neg, 1), X(neg, 2), 'ko', 'MarkerFaceColor', 'y', ...
-     'MarkerSize', 7);
 ```
 
 * sigmoid.m代码
 
-```octave
-    g = 1 ./ (1 + e .^ -z);
+```MATLAB
+g = 1 ./ (1 + e .^ -z);
 ```
 
 * costFunction.m代码
 
-```octave
-    h_theta = sigmoid(X*theta);
-    J = (-1/m) * sum(y .* log(h_theta) + (1-y) .* log(1-h_theta));
-    grad = (1/m)*(X') * (h_theta - y);
+```MATLAB
+h_theta = sigmoid(X*theta);
+J = (-1/m) * sum(y .* log(h_theta) + (1-y) .* log(1-h_theta));
+grad = (1/m)*(X') * (h_theta - y);
 ```
 
 * predict.m代码
 
-```octave
-    p = round(sigmoid(X * theta));
-    % round()四舍五入
+```MATLAB
+p = round(sigmoid(X * theta));
+% round()四舍五入
 ```
 
 ## ex2_reg.m
 
 costFunctionReg.m代码
 
-```octave
-    h_theta = sigmoid(X*theta);
-    J = (-1/m) * sum(y .* log(h_theta) + (1-y) .* log(1-h_theta)) + lambda/2/m * sum(theta(2:length(theta)) .^ 2);
-    grad(1) = (1/m)*(X'(1,:))*(h_theta - y);
-    grad(2:size(theta, 1)) = (1/m) * (X'(2:size(X',1),:)) * (h_theta - y) + lambda/m * theta(2:size(theta,1),:);
-    % grad(1)要单独处理
+```MATLAB
+h_theta = sigmoid(X*theta);
+J = (-1/m) * sum(y .* log(h_theta) + (1-y) .* log(1-h_theta)) + lambda/2/m * sum(theta(2:length(theta)) .^ 2);
+grad(1) = (1/m)*(X'(1,:))*(h_theta - y);
+grad(2:size(theta, 1)) = (1/m) * (X'(2:size(X',1),:)) * (h_theta - y) + lambda/m * theta(2:size(theta,1),:);
+% grad(1)要单独处理
 ```
 
 ## Summary

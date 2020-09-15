@@ -27,18 +27,18 @@
 * linearRegCostFunction.m代码
 
 ```MATLAB
-    h_x = X * theta; % 12x1
-    J = (1/(2*m))*sum((h_x - y).^2) + (lambda/(2*m))*sum(theta(2:end).^2); % scalar
+h_x = X * theta; % 12x1
+J = (1/(2*m))*sum((h_x - y).^2) + (lambda/(2*m))*sum(theta(2:end).^2); % scalar
 
-    grad(1) = (1/m)*sum((h_x-y).*X(:,1)); % scalar == 1x1
-    grad(1) = (1/m)*(X(:,1)'*(h_x-y)); % scalar == 1x1
-    grad(2:end) = (1/m)*(X(:,2:end)'*(h_x-y)) + (lambda/m)*theta(2:end); % n x 1
+grad(1) = (1/m)*sum((h_x-y).*X(:,1)); % scalar == 1x1
+grad(1) = (1/m)*(X(:,1)'*(h_x-y)); % scalar == 1x1
+grad(2:end) = (1/m)*(X(:,2:end)'*(h_x-y)) + (lambda/m)*theta(2:end); % n x 1
 ```
 
 * learningCurve.m代码
 
 ```MATLAB
-    for i = 1:m
+for i = 1:m
     Xtrain = X(1:i,:);
     ytrain = y(1:i);
 

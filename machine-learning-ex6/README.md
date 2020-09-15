@@ -3,13 +3,13 @@
 * gaussianKernel.m代码
 
 ```MATLAB
-    sim = exp(-1*sum(abs(x1-x2).^2)/(2*sigma^2));
+sim = exp(-1*sum(abs(x1-x2).^2)/(2*sigma^2));
 ```
 
 * dataset3Params.m代码
 
 ```MATLAB
-    C_list     = [0.01 0.03 0.1 0.3 1 3 10 30]';
+C_list     = [0.01 0.03 0.1 0.3 1 3 10 30]';
 sigma_list = [0.01 0.03 0.1 0.3 1 3 10 30]';
   
 prediction_error = zeros(length(C_list), length(sigma_list));
